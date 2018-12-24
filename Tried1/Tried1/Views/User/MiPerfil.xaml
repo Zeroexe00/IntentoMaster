@@ -4,9 +4,24 @@
              x:Class="Tried1.MiPerfil">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lbl_Usuarionombre" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" />
+                <Label x:Name="lbl_Apellido" Grid.Row="1" Grid.Column="0"></Label>
+                <Label x:Name="lbl_Email" Grid.Row="2" Grid.Column="0"></Label>
+                <Label x:Name="lbl_Rut" Grid.Row="3" Grid.Column="0"></Label>
+                <Label x:Name="lbl_Supermercado" Grid.Row="4" Grid.Column="0"></Label>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

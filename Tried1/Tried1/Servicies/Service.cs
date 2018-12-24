@@ -22,12 +22,30 @@ namespace Tried1.Servicies
                 return JsonConvert.DeserializeObject<List<EmpaqueModel>>(json);
             }
         }
-        public static async Task<Models.EmpaqueModel> login (string email , string contra)
+        public static async Task<EmpaqueModel> GetEmpaque(string path)
         {
-            using(var httpClient = new HttpClient())
+            using (var httpClient = new HttpClient())
             {
                 var result = await httpClient.GetAsync($"{BASE}/{path}");
-                var json = await result.Content.read 
+                var json = await result.Content.ReadAsStringAsync();
+
+                return JsonConvert.DeserializeObject<EmpaqueModel>(json);
+            }
+        }
+
+        public static async Task<Models.EmpaqueModel> Login (string path)
+        {
+            try { 
+                using (var httpClient = new HttpClient())
+                {
+                    var result = await httpClient.GetAsync($"{BASE}/{path}");
+                    var json = await result.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<Models.EmpaqueModel>(json);
+
+                }
+            }catch (Exception ex)
+            {
+                throw new Exception("error al ingresar al sistema",ex);
             }
         }
     }
