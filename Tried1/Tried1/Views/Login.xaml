@@ -40,10 +40,10 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Image Source="" HeightRequest="70" VerticalOptions="End"/>
-                <Label x:Name="lbl_error_user">
+                <Label x:Name="lbl_error_user" >
                 </Label>
                 <Entry x:Name="Txt_email" Grid.Row="1" Placeholder="Correo Electrónico" PlaceholderColor="#bababa" FontSize="16" TextChanged="Txt_email_TextChanged"/>
-                
+                <Label x:Name="lbl_error_pass"></Label>
                 <Entry x:Name="Txt_pass" Grid.Row="2" Placeholder="Contraseña" IsPassword="true" PlaceholderColor="#bababa" FontSize="16" TextChanged="Txt_pass_TextChanged"/>
                 <Button Text="Iniciar Sesión" Clicked="Ingresar" BackgroundColor="orange" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"/>
                 

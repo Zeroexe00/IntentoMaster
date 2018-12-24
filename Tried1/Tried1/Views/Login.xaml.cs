@@ -20,12 +20,20 @@ namespace Tried1
 
         private void Ingresar(object sender, EventArgs e)
         {
+            if (Txt_email.Text.Equals("") )
+            {
+                lbl_error_user.Text = "Error ingrese email";
+                return;
+            }else if (Txt_pass.Text.Equals("")) {
+                lbl_error_pass.Text = "Error ingrese password";
+                return;
+            }
             string user = Txt_email.Text.ToString();
             string pass = Txt_pass.Text.ToString();
             string path = "api/Login?email="+user+"&contra="+pass;
 
 
-            EmpaqueModel empaque = new EmpaqueModel();
+           
            Service Serv = new Servicies.Service();
 
            Task<EmpaqueModel> Emp =  Service.Login(path);
@@ -37,8 +45,6 @@ namespace Tried1
                 if(ExisteReg == true)
                 {
                    
-                    
-
                     Navigation.PushAsync(new MainPage());
                     Application.Current.SavePropertiesAsync();
                 }

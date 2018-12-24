@@ -24,7 +24,7 @@ namespace Tried1
         
         private void Llenarview(EmpaqueModel emp)
         {
-            emp= await ser.
+            
             lbl_Usuarionombre.Text= emp.FirstName.ToString();
             lbl_Apellido.Text = emp.LastName.ToString();
             lbl_Rut.Text = emp.Rut.ToString();
