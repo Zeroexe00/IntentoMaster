@@ -43,7 +43,7 @@
                 <Label x:Name="lbl_error_user" >
                 </Label>
                 <Entry x:Name="Txt_email" Grid.Row="1" Placeholder="Correo Electrónico" PlaceholderColor="#bababa" FontSize="16" TextChanged="Txt_email_TextChanged"/>
-                <Label x:Name="lbl_error_pass"></Label>
+                <Label x:Name="lbl_error_pass" ></Label>
                 <Entry x:Name="Txt_pass" Grid.Row="2" Placeholder="Contraseña" IsPassword="true" PlaceholderColor="#bababa" FontSize="16" TextChanged="Txt_pass_TextChanged"/>
                 <Button Text="Iniciar Sesión" Clicked="Ingresar" BackgroundColor="orange" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"/>
                 
@@ -66,7 +66,7 @@
             </Grid>
             <StackLayout Grid.Row="2" BackgroundColor="#FFFFFF">
                 <Label HeightRequest="1" BackgroundColor="#E3E3E3"/>
-                <Label Text="Registrarse" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Button Text="Registrarse" VerticalOptions="FillAndExpand" Clicked="Registro" />
             </StackLayout>
         </Grid>
         

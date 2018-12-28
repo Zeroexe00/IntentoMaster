@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tried1.Views.User.Register"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <Entry x:Name="Rut" Placeholder="Rut" Grid.Row="1" Grid.Column="0"></Entry>
+                <Entry x:Name="Nombre" Placeholder="Nombre" Grid.Row="2" Grid.Column="0"></Entry>
+                <Entry x:Name="Apellido" Placeholder="Apellido" Grid.Row="3" Grid.Column="0"></Entry>
+                <DatePicker x:Name="Dtp_fechanacimiento" MinimumDate="{Binding fechaMinima}" MaximumDate="{Binding fechaLimite}" Grid.Row="4" Grid.Column="0">
+                </DatePicker>
+                <Entry x:Name="Email" Placeholder="Email" Grid.Row="5" Grid.Column="0"></Entry>
+                <Entry x:Name="Contraseña" Placeholder="Password" Grid.Row="6" Grid.Column="0"></Entry>
+                <Picker x:Name="Sexo" ItemDisplayBinding="{Binding Sexo}" SelectedItem="TBD" Grid.Row="7" Grid.Column="0"></Picker>
+                <Entry x:Name="NumPhone" Placeholder="Numero Telefono" Grid.Row="1" Grid.Column="1"></Entry>
+                <Entry x:Name="Region" Placeholder="Nombre" Grid.Row="2" Grid.Column="1"></Entry>
+                <Entry x:Name="Ciudad" Text="" Grid.Row="3" Grid.Column="1"></Entry>
+                <Entry x:Name="Supermercado" Placeholder="Supermercado" Grid.Row="4" Grid.Column="1"></Entry>
+                <Button Clicked="NuevoRegistro" Text="Registrar" Grid.Row="5" Grid.Column="1">
+                </Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

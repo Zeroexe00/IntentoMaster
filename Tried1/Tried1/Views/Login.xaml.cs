@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tried1.Models;
 using Tried1.Servicies;
+using Tried1.Views.User;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,7 +33,7 @@ namespace Tried1
             string pass = Txt_pass.Text.ToString();
             string path = "api/Login?email="+user+"&contra="+pass;
 
-
+            
            
            Service Serv = new Servicies.Service();
 
@@ -52,7 +53,7 @@ namespace Tried1
             }
             else
             {
-                lbl_error_user.Text = "Error : usuario no creado";
+                lbl_error_user.Text = "Error: usuario no creado";
             }
 
             
@@ -69,6 +70,11 @@ namespace Tried1
         private void Txt_pass_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Registro(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Register());
         }
     }
 }
