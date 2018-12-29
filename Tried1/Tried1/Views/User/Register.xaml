@@ -31,7 +31,15 @@
                 </DatePicker>
                 <Entry x:Name="Email" Placeholder="Email" Grid.Row="5" Grid.Column="0"></Entry>
                 <Entry x:Name="Contraseña" Placeholder="Password" Grid.Row="6" Grid.Column="0"></Entry>
-                <Picker x:Name="Sexo" ItemDisplayBinding="{Binding Sexo}" SelectedItem="TBD" Grid.Row="7" Grid.Column="0"></Picker>
+                <Picker x:Name="PSexo" Title="Genero"  Grid.Row="7" Grid.Column="0">
+                    
+                    <Picker.Items>
+                        <x:String>Hombre</x:String>
+                        <x:String>Mujer</x:String>
+                        <x:String>Otro</x:String>
+                    </Picker.Items>
+                    
+                </Picker>
                 <Entry x:Name="NumPhone" Placeholder="Numero Telefono" Grid.Row="1" Grid.Column="1"></Entry>
                 <Entry x:Name="Region" Placeholder="Nombre" Grid.Row="2" Grid.Column="1"></Entry>
                 <Entry x:Name="Ciudad" Text="" Grid.Row="3" Grid.Column="1"></Entry>

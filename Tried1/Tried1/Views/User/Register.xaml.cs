@@ -15,8 +15,15 @@ namespace Tried1.Views.User
 		public Register ()
 		{
 			InitializeComponent ();
-            Sexo.ItemsSource =sex ;
-		}
+            Fillup();
+            
+        }
+
+
+        private void Fillup()
+        {
+           
+        }
 
         string rut;
         string nombre;
@@ -30,7 +37,7 @@ namespace Tried1.Views.User
         string ciudad;
         int supermercado;
 
-        List<sexo> sex = new List<sexo>();
+                
         
 
 
@@ -43,7 +50,7 @@ namespace Tried1.Views.User
             emp.BirthDate = Dtp_fechanacimiento.Date;
             emp.Email = Email.Text;
             emp.Password = Contraseña.Text;
-            emp.Gender = Convert.ToInt32(Sexo.ToString());
+            emp.Gender = Convert.ToInt32(PSexo.ToString());
             emp.PhoneNumber = Convert.ToInt32(NumPhone.Text);
             emp.Address = Region.Text;
             if(Int32.TryParse(Supermercado.Text.ToString(), out supermercado))
